@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Pizzalicious/static/css/main.9f7d45c2.css",
+    "main.js": "/Pizzalicious/static/js/main.81153c0f.js",
+    "index.html": "/Pizzalicious/index.html",
+    "main.9f7d45c2.css.map": "/Pizzalicious/static/css/main.9f7d45c2.css.map",
+    "main.81153c0f.js.map": "/Pizzalicious/static/js/main.81153c0f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f7d45c2.css",
+    "static/js/main.81153c0f.js"
+  ]
+}
