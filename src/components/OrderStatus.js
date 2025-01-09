@@ -70,7 +70,7 @@ const OrderStatus = () => {
         {stages.map((stage) => (
           <div key={stage} className="col-md-3 mb-4">
             <div className="card shadow-sm">
-              <div className="card-header bg-primary text-white">
+              <div className="card-header text-white" style={{ backgroundColor: "#d32f2f" }}>
                 <h5 className="card-title text-center mb-0">{stage}</h5>
               </div>
               <div className="card-body">
@@ -87,9 +87,19 @@ const OrderStatus = () => {
                         cardHighlight(order) ? "bg-danger text-white" : "bg-light"
                       }`}
                     >
-                      <p className="mb-1">
-                        <strong>Order ID:</strong> {order.orderId}
-                      </p>
+                      <div className="d-flex justify-content-between align-items-center mb-1">
+                        <p className="mb-0">
+                          <strong>Order ID:</strong> {order.orderId}
+                        </p>
+                        <div>
+                          {order.type === "Veg" && (
+                            <i className="fa-solid fa-leaf" style={{ color: "#10e529" }}></i>
+                          )}
+                          {order.type === "Non-Veg" && (
+                            <i className="fa-solid fa-drumstick-bite" style={{ color: "#d76565" }}></i>
+                          )}
+                        </div>
+                      </div>
                       {order.stage !== "Order Picked" && (
                         <p className="mb-1">
                           <strong>Time Elapsed:</strong>{" "}
@@ -102,7 +112,7 @@ const OrderStatus = () => {
                       <div className="d-flex justify-content-between">
                         {order.stage !== "Order Picked" && (
                           <button
-                            className="btn btn-sm btn-success"
+                            className="btn btn-sm btn-warning"
                             onClick={() =>
                               handleNextButtonClick(order.orderId, order.stage)
                             }

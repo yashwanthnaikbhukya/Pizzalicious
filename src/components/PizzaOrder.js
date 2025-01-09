@@ -53,7 +53,7 @@ const PizzaOrder = () => {
     </div>
 
     </div>
-    <button className='btn btn-primary' type="button" onClick={handlePlaceOrder}>Order</button>
+    <button className='btn btn-success' type="button" onClick={handlePlaceOrder}>Order</button>
     </div>
   )
 }
