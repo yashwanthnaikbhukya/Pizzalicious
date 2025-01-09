@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Pizzalicious
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Pizzalicious** is a pizza shop simulation application designed to mimic the behavior of a real-world pizza restaurant. The application allows users to place orders, track their status, and visualize the progress of each order. Developed using **React**, **Redux**, **Bootstrap**, and **Font Awesome**, the app delivers a seamless and responsive experience for both desktop and mobile users.
 
-## Available Scripts
+### [Live Demo](https://yashwanthnaikbhukya.github.io/Pizzalicious/)
+## Features
 
-In the project directory, you can run:
+### Core Features
+1. **Placing Orders**: A form to configure and place pizza orders with options:
+   - **Type**: Veg or Non-Veg
+   - **Size**: Large, Medium, Small
+   - **Base**: Thin or Thick
 
-### `npm start`
+2. **Order Limit**: Restricts the restaurant to handle a maximum of 10 active orders. Displays a message "Not taking any order for now" when the limit is reached.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Order Stages**:
+   - Order Placed
+   - Order in Making
+   - Order Ready
+   - Order Picked
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Highlight Delayed Orders**: Orders remaining in the same stage for more than the specified preparation time are highlighted in **red**.
+   - Preparation times:
+     - Small: 3 minutes
+     - Medium: 4 minutes
+     - Large: 5 minutes
 
-### `npm test`
+5. **Time Tracking**:
+   - Displays the time spent in each stage for every pizza.
+   - Tracks the total time since the order was placed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. **Interactive Actions**:
+   - Move orders manually between stages using action buttons: `Next`, `Picked`, or `Cancel`.
+   - Cancel orders at any stage before they are marked as Ready.
 
-### `npm run build`
+7. **Order Display**:
+   - Each stage is displayed in separate columns.
+   - Pizzas are shown as cards, categorized by their current stage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8. **Main Dashboard**:
+   - Displays all orders in progress with their remaining preparation time and Order ID.
+   - Shows the total number of pizzas delivered today.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Bonus Features
+1. **Sorting Orders**:
+   - Orders are sorted based on delays at each stage for better visualization.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Dynamic Preparation Times**:
+   - Different pizza sizes have unique preparation times. Orders are highlighted in red based on their respective delays.
 
-### `npm run eject`
+3. **Icons for Clarity**:
+   - Veg and Non-Veg pizzas are marked with distinct icons for better differentiation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Responsive Design**:
+   - The application is fully responsive and optimized for both desktop and mobile devices.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies Used
+- **React.js**: For building the user interface.
+- **Redux**: For state management.
+- **Bootstrap**: For responsive styling.
+- **Font Awesome**: For icons.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Follow these steps to run the project locally:
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yashwanthnaikbhukya/pizzalicious.git
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate to the project directory:
+   ```bash
+   cd pizzalicious
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application will be available at `http://localhost:3000`.
 
-### Analyzing the Bundle Size
+## Deployment
+The application is deployed online and can be accessed [here](https://yashwanthnaikbhukya.github.io/Pizzalicious/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Enhancements
+- Implement real-time notifications for delayed orders.
+- Add support for customizing toppings and sides.
+- Enhance the UI with more animation effects.
